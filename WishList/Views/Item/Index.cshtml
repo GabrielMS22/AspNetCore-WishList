@@ -1,16 +1,16 @@
 ﻿
-@model  List<WishList.Models.Item>
+@model List<WishList.Models.Item>
 @{
     ViewData["Title"] = "Index";
 }
 
 <h1>Wishlist</h1>
 <a asp-action="create">Add Item</a>
-<ul>
-    @foreach(var item in @Model)
-    {
-        <li>Description: @item.Description</li>
-        <a asp-action="delete" asp-route-id="@item.Id">delete</a>
-    }
-</ul>
+@foreach (var item in @Model)
+{
+    <ul>
+
+        <li>Description: @item.Description <a asp-action="delete" asp-route-id="@item.Id">delete</a> </li>
+    </ul>
+}
 
