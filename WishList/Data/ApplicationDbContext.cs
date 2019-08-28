@@ -9,9 +9,9 @@ namespace WishList.Data
 {
     public class ApplicationDbContext: DbContext
     {
-        private readonly DbContextOptions<ApplicationDbContext> options;
+        private readonly DbContextOptions options;
 
-        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
+        public ApplicationDbContext(DbContextOptions options)
             : base(options)
         {
             this.options = options;
