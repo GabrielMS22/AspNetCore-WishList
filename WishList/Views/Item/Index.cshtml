@@ -9,7 +9,7 @@
 <ul>
     @foreach(var item in @Model)
     {
-        <li>Description: @item</li>
+        <li>Description: @item.Description</li>
         <a asp-action="delete" asp-route-id="@item.Id">delete</a>
     }
 </ul>
