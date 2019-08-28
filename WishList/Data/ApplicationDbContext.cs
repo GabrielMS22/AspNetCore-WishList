@@ -9,12 +9,12 @@ namespace WishList.Data
 {
     public class ApplicationDbContext: DbContext
     {
-        
+        private readonly DbContextOptions<ApplicationDbContext> options;
 
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
         {
-        
+            this.options = options;
         }
         public DbSet<Item> Items { get; set; }
     }
